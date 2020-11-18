@@ -9,6 +9,10 @@ import { PromisesComponent } from './promises/promises.component';
 import { CallbacksComponent } from './callbacks/callbacks.component';
 import { MapComponent } from './map/map.component';
 import { CreatorComponent } from './creator/creator.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// Import for the shared module and ALL of its components
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,9 @@ import { CreatorComponent } from './creator/creator.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
